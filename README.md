@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="Majed_Saeed_profile.jpg" width="250">
+  <img src="banner.png" width="100%">
 </p>
-
 
 ## Hi there 👋
 
