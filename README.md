@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="profile-majed.png" width="100%">
+  <img src="profile.majed.png" width="100%">
 </p>
 
 
