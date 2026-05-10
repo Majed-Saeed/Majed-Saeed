@@ -1,8 +1,6 @@
 <p align="center">
   <img src="profile.majed.png" width="100%">
 </p>
-
-
 ## Hi there 👋
 
 I'm Majed Saeed.
