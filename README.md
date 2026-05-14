@@ -3,7 +3,7 @@
 </p>
 ## Hi there 👋
 
-I'm Majed Saeed.
+I'm Majed.
 
 Cloud Engineer | Cybersecurity | Cloud Security | Automation
 
