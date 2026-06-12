@@ -1,0 +1,91 @@
+<svg width="1000" height="240" viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#060A13"/>
+      <stop offset="100%" stop-color="#0C1626"/>
+    </linearGradient>
+    <linearGradient id="shieldStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#7DD3FC"/>
+    </linearGradient>
+    <linearGradient id="cloudFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#111B2E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1000" height="240" rx="10" fill="url(#sky)"/>
+
+  <!-- faint grid -->
+  <g stroke="#1E3A5F" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 60H1000"/><path d="M0 120H1000"/><path d="M0 180H1000"/>
+    <path d="M125 0V240"/><path d="M250 0V240"/><path d="M375 0V240"/><path d="M500 0V240"/>
+    <path d="M625 0V240"/><path d="M750 0V240"/><path d="M875 0V240"/>
+  </g>
+
+  <!-- network nodes (slow pulse) -->
+  <g fill="#60A5FA">
+    <circle cx="140" cy="52" r="2.2"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="190" r="2.2"><animate attributeName="opacity" values="0.7;0.15;0.7" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="40" r="2.2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="880" cy="160" r="2.2"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="5.5s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="205" r="2.2"><animate attributeName="opacity" values="0.3;0.85;0.3" dur="6.5s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- drifting clouds: back layer (slow) -->
+  <g opacity="0.45">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="-260 0" to="1100 0" dur="46s" repeatCount="indefinite"/>
+      <path d="M60 78c0-12 10-22 22-22 3-14 15-24 30-24 13 0 24 8 28 19 2-1 5-1 8-1 12 0 22 10 22 22s-10 22-22 22H82c-12 0-22-9-22-16z" fill="url(#cloudFill)" stroke="#274465" stroke-width="1.5"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="380 0" to="1740 0" dur="46s" repeatCount="indefinite"/>
+      <path d="M60 170c0-10 8-18 18-18 3-11 13-19 25-19 11 0 20 6 23 15 2-1 4-1 7-1 10 0 18 8 18 18s-8 18-18 18H78c-10 0-18-7-18-13z" fill="url(#cloudFill)" stroke="#274465" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- drifting clouds: front layer (faster) -->
+  <g opacity="0.85">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="-320 0" to="1120 0" dur="30s" repeatCount="indefinite"/>
+      <path d="M120 130c0-15 12-27 27-27 4-17 19-30 37-30 16 0 30 10 35 24 3-1 6-2 10-2 15 0 27 12 27 27s-12 27-27 27H147c-15 0-27-11-27-19z" fill="url(#cloudFill)" stroke="#33557F" stroke-width="1.8"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="200 0" to="1640 0" dur="30s" repeatCount="indefinite"/>
+      <path d="M120 64c0-12 10-21 21-21 3-13 15-23 29-23 13 0 23 8 27 18 3-1 5-1 8-1 12 0 21 9 21 21s-9 21-21 21H141c-11 0-21-8-21-15z" fill="url(#cloudFill)" stroke="#33557F" stroke-width="1.8"/>
+    </g>
+  </g>
+
+  <!-- shield + lock -->
+  <g transform="translate(500 118)">
+    <circle r="74" fill="url(#glow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <!-- expanding pulse ring -->
+    <circle r="46" stroke="#3B82F6" stroke-width="1.5" fill="none">
+      <animate attributeName="r" values="46;70" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M0 -46 L34 -32 V4 C34 26 18 40 0 48 C-18 40 -34 26 -34 4 V-32 Z"
+          fill="#0B1626" stroke="url(#shieldStroke)" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- lock -->
+    <rect x="-11" y="-6" width="22" height="18" rx="3.5" fill="none" stroke="#7DD3FC" stroke-width="2.5"/>
+    <path d="M-6 -6 V-12 a6 6 0 0 1 12 0 V-6" fill="none" stroke="#7DD3FC" stroke-width="2.5"/>
+    <circle cy="3" r="2" fill="#7DD3FC"/>
+    <!-- status blip -->
+    <circle cx="26" cy="-38" r="3.5" fill="#FF9900">
+      <animate attributeName="opacity" values="1;0.25;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- baseline accent -->
+  <rect x="0" y="232" width="1000" height="3" fill="#FF9900" opacity="0.8" rx="1.5"/>
+  <rect x="0" y="232" width="180" height="3" fill="#FFD699" rx="1.5">
+    <animate attributeName="x" values="-180;1000" dur="6s" repeatCount="indefinite"/>
+  </rect>
+</svg>
