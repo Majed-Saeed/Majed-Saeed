@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="profile.majed.png" width="60%">
+  <img src="profile.majed.png" width="90%">
 </p>
 ## Hi there 👋
 
